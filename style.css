@@ -1,0 +1,9 @@
+html {
+  box-sizing: border-box; /* Ensures the rendered width and height will be 
+exactly same as specified thus creating a consistent sizing.*/
+}
+
+body {
+  margin: 0; /* Removes default margin applied by browers */
+  min-height: 100vh; /* Ensures body element is a least as tall as the viewpoint */
+}
