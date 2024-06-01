@@ -1,10 +1,19 @@
+// Declaring DOM Variables for Manipulation
+const quoteContainer = document.getElementById("quote-container");
+const quoteText = document.getElementById("quote");
+const quoteAuthor = document.getElementById("author");
+const twitterBtn = document.getElementById("twitter");
+const newQuoteBtn = document.getElementById("new-quote");
+
 // Stores the pulled fetched Responsed into Array.
 let apiQuotes = []; // Using 'let' as the array updates constantly
 
 // Function to get a single quote
 const newQuote = () => {
+  // Generates random quotes
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-  console.log(quote);
+  quoteText.textContent = quote.text;
+  quoteAuthor.textContent = quote.author;
 };
 
 // Get Quotes Function
