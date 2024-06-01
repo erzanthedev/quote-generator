@@ -12,8 +12,17 @@ let apiQuotes = []; // Using 'let' as the array updates constantly
 const newQuote = () => {
   // Generates random quotes
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+
+  // Set Quote by Appends the value into it's corresponding element tag
   quoteText.textContent = quote.text;
   quoteAuthor.textContent = quote.author;
+
+  // Check if length is long to determine styling
+  if (quote.text.length > 120) {
+    quoteText.classList.add("long-quote");
+  } else {
+    quoteText.classList.remove("long-quote");
+  }
 };
 
 // Get Quotes Function
